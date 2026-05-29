@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoachAI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <nav>
+      <h2>CoachAI</h2>
+      <a href="#sobre">Sobre</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#resultados">Resultados</a>
+    </nav>
+
+    <div class="hero-content">
+      <h1>CoachAI</h1>
+      <p>Aplicação Android para análise postural e feedback em tempo real usando Human Pose Estimation.</p>
+      <a class="btn" href="#sobre">Ver Projeto</a>
+    </div>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre o Projeto</h2>
+    <p>
+      O CoachAI é uma aplicação Android desenvolvida em Kotlin que utiliza o MediaPipe Pose Landmarker
+      para detetar pontos-chave do corpo humano e fornecer feedback automático durante exercícios físicos.
+    </p>
+  </section>
+
+  <section id="objetivos">
+    <h2>Objetivos</h2>
+    <div class="cards">
+      <div class="card">Análise postural automática</div>
+      <div class="card">Feedback em tempo real</div>
+      <div class="card">Deteção de keypoints corporais</div>
+      <div class="card">Apoio à prática de exercício físico</div>
+    </div>
+  </section>
+
+  <section id="funcionalidades">
+    <h2>Funcionalidades</h2>
+    <div class="cards">
+      <div class="card">Deteção de 33 pontos corporais</div>
+      <div class="card">Processamento de vídeo</div>
+      <div class="card">Câmara em tempo real</div>
+      <div class="card">Análise de iluminação</div>
+      <div class="card">Avaliação do enquadramento</div>
+      <div class="card">Overlay do esqueleto</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tecnologias Utilizadas</h2>
+    <div class="tech">
+      <span>Kotlin</span>
+      <span>Android Studio</span>
+      <span>CameraX</span>
+      <span>MediaPipe</span>
+      <span>Pose Landmarker</span>
+      <span>XML Layouts</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Arquitetura</h2>
+    <div class="architecture">
+      CameraX → MediaPipe Pose Landmarker → Análise Postural → Feedback ao Utilizador
+    </div>
+  </section>
+
+  <section id="resultados">
+    <h2>Resultados</h2>
+    <p>
+      Foram realizados testes com diferentes modelos de Human Pose Estimation. O MediaPipe Pose Landmarker
+      apresentou melhor desempenho para uso mobile em tempo real, enquanto o YOLO Pose teve desempenho inferior.
+      RTMPose e ViTPose foram analisados, mas não foi possível concluir os testes devido a problemas de dependências.
+    </p>
+  </section>
+
+  <section>
+    <h2>Screenshots</h2>
+    <div class="gallery">
+      <img src="images/home.png" alt="Ecrã inicial">
+      <img src="images/camera.png" alt="Câmara em tempo real">
+      <img src="images/feedback.png" alt="Feedback">
+      <img src="images/overlay.png" alt="Overlay">
+    </div>
+  </section>
+
+  <footer>
+    <p>Desenvolvido por Afonso Silva — Engenharia Informática, UTAD</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
