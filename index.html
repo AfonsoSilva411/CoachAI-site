@@ -1,99 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoachAI</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoachAI | Análise Postural Inteligente</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="hero">
-    <nav>
-      <h2>CoachAI</h2>
+<header class="hero">
+  <nav class="navbar">
+    <h2>CoachAI</h2>
+    <div>
       <a href="#sobre">Sobre</a>
       <a href="#funcionalidades">Funcionalidades</a>
       <a href="#resultados">Resultados</a>
-    </nav>
+      <a href="#screenshots">Screenshots</a>
+    </div>
+  </nav>
 
-    <div class="hero-content">
+  <div class="hero-container">
+    <div class="hero-text">
+      <span class="badge">Projeto Android · Human Pose Estimation</span>
       <h1>CoachAI</h1>
-      <p>Aplicação Android para análise postural e feedback em tempo real usando Human Pose Estimation.</p>
-      <a class="btn" href="#sobre">Ver Projeto</a>
+      <p>
+        Aplicação Android para análise postural e feedback em tempo real,
+        utilizando MediaPipe Pose Landmarker para apoiar a execução correta
+        de exercícios físicos.
+      </p>
+
+      <div class="buttons">
+        <a href="#sobre" class="btn primary">Ver Projeto</a>
+        <a href="#resultados" class="btn secondary">Resultados</a>
+      </div>
     </div>
-  </header>
 
-  <section id="sobre">
-    <h2>Sobre o Projeto</h2>
-    <p>
-      O CoachAI é uma aplicação Android desenvolvida em Kotlin que utiliza o MediaPipe Pose Landmarker
-      para detetar pontos-chave do corpo humano e fornecer feedback automático durante exercícios físicos.
-    </p>
-  </section>
-
-  <section id="objetivos">
-    <h2>Objetivos</h2>
-    <div class="cards">
-      <div class="card">Análise postural automática</div>
-      <div class="card">Feedback em tempo real</div>
-      <div class="card">Deteção de keypoints corporais</div>
-      <div class="card">Apoio à prática de exercício físico</div>
+    <div class="phone-card">
+      <div class="phone-screen">
+        <h3>Real-time Feedback</h3>
+        <p>Corpo visível</p>
+        <p>Boa iluminação</p>
+        <p>Postura correta</p>
+      </div>
     </div>
-  </section>
+  </div>
+</header>
 
-  <section id="funcionalidades">
-    <h2>Funcionalidades</h2>
-    <div class="cards">
-      <div class="card">Deteção de 33 pontos corporais</div>
-      <div class="card">Processamento de vídeo</div>
-      <div class="card">Câmara em tempo real</div>
-      <div class="card">Análise de iluminação</div>
-      <div class="card">Avaliação do enquadramento</div>
-      <div class="card">Overlay do esqueleto</div>
+<section class="stats">
+  <div>
+    <h3>33</h3>
+    <p>Keypoints corporais</p>
+  </div>
+  <div>
+    <h3>~75 FPS</h3>
+    <p>MediaPipe em testes offline</p>
+  </div>
+  <div>
+    <h3>Android</h3>
+    <p>Aplicação mobile</p>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre o Projeto</h2>
+  <p>
+    O CoachAI foi desenvolvido com o objetivo de auxiliar utilizadores durante
+    exercícios físicos, analisando a postura corporal através da câmara do
+    dispositivo. A aplicação identifica pontos-chave do corpo humano e apresenta
+    feedback automático sobre enquadramento, iluminação, posicionamento e
+    visibilidade corporal.
+  </p>
+</section>
+
+<section>
+  <h2>Tecnologias Utilizadas</h2>
+  <div class="tech">
+    <span>Kotlin</span>
+    <span>Android Studio</span>
+    <span>CameraX</span>
+    <span>MediaPipe</span>
+    <span>Pose Landmarker</span>
+    <span>XML Layouts</span>
+    <span>GitHub</span>
+  </div>
+</section>
+
+<section id="funcionalidades">
+  <h2>Funcionalidades Principais</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Deteção Corporal</h3>
+      <p>Identificação de 33 pontos-chave do corpo humano através do MediaPipe Pose Landmarker.</p>
     </div>
-  </section>
 
-  <section>
-    <h2>Tecnologias Utilizadas</h2>
-    <div class="tech">
-      <span>Kotlin</span>
-      <span>Android Studio</span>
-      <span>CameraX</span>
-      <span>MediaPipe</span>
-      <span>Pose Landmarker</span>
-      <span>XML Layouts</span>
+    <div class="card">
+      <h3>Feedback em Tempo Real</h3>
+      <p>Mensagens automáticas para melhorar postura, distância, iluminação e enquadramento.</p>
     </div>
-  </section>
 
-  <section>
-    <h2>Arquitetura</h2>
-    <div class="architecture">
-      CameraX → MediaPipe Pose Landmarker → Análise Postural → Feedback ao Utilizador
+    <div class="card">
+      <h3>Processamento de Vídeo</h3>
+      <p>Análise de vídeos de exercícios para testar o desempenho dos modelos de pose estimation.</p>
     </div>
-  </section>
 
-  <section id="resultados">
-    <h2>Resultados</h2>
-    <p>
-      Foram realizados testes com diferentes modelos de Human Pose Estimation. O MediaPipe Pose Landmarker
-      apresentou melhor desempenho para uso mobile em tempo real, enquanto o YOLO Pose teve desempenho inferior.
-      RTMPose e ViTPose foram analisados, mas não foi possível concluir os testes devido a problemas de dependências.
-    </p>
-  </section>
-
-  <section>
-    <h2>Screenshots</h2>
-    <div class="gallery">
-      <img src="images/home.png" alt="Ecrã inicial">
-      <img src="images/camera.png" alt="Câmara em tempo real">
-      <img src="images/feedback.png" alt="Feedback">
-      <img src="images/overlay.png" alt="Overlay">
+    <div class="card">
+      <h3>Overlay Visual</h3>
+      <p>Desenho do esqueleto corporal sobre a imagem capturada pela câmara.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>Desenvolvido por Afonso Silva — Engenharia Informática, UTAD</p>
-  </footer>
+<section>
+  <h2>Arquitetura do Sistema</h2>
+  <div class="architecture">
+    <div>CameraX</div>
+    <span>→</span>
+    <div>MediaPipe Pose Landmarker</div>
+    <span>→</span>
+    <div>Análise Postural</div>
+    <span>→</span>
+    <div>Feedback ao Utilizador</div>
+  </div>
+</section>
+
+<section>
+  <h2>Metodologia</h2>
+  <div class="timeline">
+    <div>
+      <h3>1. Captura</h3>
+      <p>A imagem é obtida através da câmara ou de um vídeo carregado.</p>
+    </div>
+    <div>
+      <h3>2. Deteção</h3>
+      <p>O modelo identifica os pontos corporais relevantes.</p>
+    </div>
+    <div>
+      <h3>3. Análise</h3>
+      <p>São avaliadas condições como iluminação, visibilidade e posicionamento.</p>
+    </div>
+    <div>
+      <h3>4. Feedback</h3>
+      <p>O utilizador recebe indicações para corrigir a execução.</p>
+    </div>
+  </div>
+</section>
+
+<section id="resultados">
+  <h2>Resultados Experimentais</h2>
+  <p>
+    Foram realizados testes comparativos entre diferentes modelos de Human Pose
+    Estimation. O MediaPipe Pose Landmarker apresentou melhor desempenho para
+    utilização mobile em tempo real. O YOLO Pose foi também testado, mas obteve
+    menor desempenho médio. RTMPose e ViTPose foram analisados, embora não tenha
+    sido possível concluir os testes devido a incompatibilidades de dependências.
+  </p>
+
+  <div class="table">
+    <div><strong>Modelo</strong><strong>Resultado</strong></div>
+    <div><span>MediaPipe Pose Landmarker</span><span>Melhor desempenho</span></div>
+    <div><span>YOLO Pose</span><span>Desempenho inferior</span></div>
+    <div><span>RTMPose / ViTPose</span><span>Problemas de dependências</span></div>
+  </div>
+</section>
+
+<section id="screenshots">
+  <h2>Screenshots da Aplicação</h2>
+  <p class="small-text">Substitui estas imagens pelas tuas screenshots reais.</p>
+
+  <div class="gallery">
+    <img src="images/home.png" alt="Ecrã inicial CoachAI">
+    <img src="images/camera.png" alt="Câmara em tempo real">
+    <img src="images/feedback.png" alt="Feedback da aplicação">
+    <img src="images/overlay.png" alt="Overlay corporal">
+  </div>
+</section>
+
+<footer>
+  <h3>CoachAI</h3>
+  <p>Desenvolvido por Afonso Silva · Engenharia Informática · UTAD</p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
